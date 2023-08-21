@@ -24,15 +24,15 @@ Standalone Angular Applications
 
 ## Lesson-04
 - [FilterComponent](src/app/ticket/filter/filter.component.ts)
-- [TicketsComponent](src/app/ticket/tickets/tickets.component.ts)
 
 ## Lesson-05
+- [TicketsComponent](src/app/ticket/tickets/tickets.component.ts)
+
+## Lesson-06
 - [AppRoutingModule](src/app/app-routing.module.ts)
 - Delete: TicketModule, TicketRoutingModule
 - Fix:
 - [TicketCreateComponent](src/app/ticket/ticket-create/ticket-create.component.ts)
 - [TicketEditorComponent](src/app/ticket/ticket-editor/ticket-editor.component.ts)
 - [TicketEditorComponent HTML](src/app/ticket/ticket-editor/ticket-editor.component.html)
-
-## Lesson-06
 
