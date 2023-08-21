@@ -39,4 +39,5 @@ Standalone Angular Applications
 - [TicketEditorComponent HTML](src/app/ticket/ticket-editor/ticket-editor.component.html)
 
 ## Lesson-08
-- 
+- [Routes](src\app\ticket\routes.ts)
+- [AppRoutingModule](src/app/app-routing.module.ts)
