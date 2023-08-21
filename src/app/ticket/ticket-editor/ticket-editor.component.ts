@@ -1,10 +1,14 @@
 import { Component, Input, OnInit, inject, numberAttribute } from '@angular/core';
 import { TicketService } from 'src/app/service/ticket.service';
+import { FormsModule } from '@angular/forms';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-ticket-editor',
-  templateUrl: './ticket-editor.component.html',
-  styleUrls: ['./ticket-editor.component.scss']
+    selector: 'app-ticket-editor',
+    templateUrl: './ticket-editor.component.html',
+    styleUrls: ['./ticket-editor.component.scss'],
+    standalone: true,
+    imports: [NgIf, FormsModule, AsyncPipe]
 })
 export class TicketEditorComponent implements OnInit {
 

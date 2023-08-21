@@ -1,14 +1,17 @@
 import { Component, Input, inject, numberAttribute } from '@angular/core';
-import { AbstractControl, AsyncValidatorFn, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, AsyncValidatorFn, FormControl, FormGroup, ValidatorFn, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { Ticket } from 'src/app/model/ticket';
 import { TicketService } from 'src/app/service/ticket.service';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-ticket-create',
-  templateUrl: './ticket-create.component.html',
-  styleUrls: ['./ticket-create.component.scss']
+    selector: 'app-ticket-create',
+    templateUrl: './ticket-create.component.html',
+    styleUrls: ['./ticket-create.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgIf]
 })
 export class TicketCreateComponent {
 
