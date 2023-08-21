@@ -1,2 +1,6 @@
-# Angular-basic-2023-form-standalone
+# Angular-basic-2023-standalone
 Standalone Angular Applications
+
+## Lesson-01
+- Explaining the course.
+- 
