@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { Ticket } from 'src/app/model/ticket';
 import { TicketService } from 'src/app/service/ticket.service';
-import { NgIf } from '@angular/common';
+import { Location, NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-ticket-create',
@@ -18,6 +18,8 @@ export class TicketCreateComponent {
   ticketService = inject(TicketService);
 
   router = inject(Router);
+
+  location: Location = inject(Location);
 
   ticket = new Ticket();
 
@@ -97,7 +99,7 @@ export class TicketCreateComponent {
 
   onCreate(): void {
     this.ticketService.create(this.form.value).subscribe(
-      created => this.router.navigate(['/ticket'])
+      created => this.location.back()
     );
   }
 
