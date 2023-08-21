@@ -39,4 +39,4 @@ Standalone Angular Applications
 - [TicketEditorComponent HTML](src/app/ticket/ticket-editor/ticket-editor.component.html)
 
 ## Lesson-08
-
+- 
