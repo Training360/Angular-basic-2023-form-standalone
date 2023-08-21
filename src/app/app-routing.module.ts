@@ -14,24 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'ticket',
-    children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        loadComponent: () => import('./ticket/tickets/tickets.component').then(
-          m => m.TicketsComponent),
-      },
-      {
-        path: 'edit/:id',
-        loadComponent: () => import('./ticket/ticket-editor/ticket-editor.component').then(
-          m => m.TicketEditorComponent)
-      },
-      {
-        path: 'create',
-        loadComponent: () => import('./ticket/ticket-create/ticket-create.component').then(
-          m => m.TicketCreateComponent)
-      },
-    ]
+    loadChildren: () => import('./ticket/ticket.module').then(m => m.TicketModule)
   },
   {
     path: '**',
@@ -40,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true })],
+  imports: [RouterModule.forRoot(routes, {bindToComponentInputs: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
